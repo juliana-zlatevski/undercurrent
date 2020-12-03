@@ -1,10 +1,20 @@
 {% extends 'base.html' %} 
 
 {% block title %} 
-Post Feed
+Recent Posts
 {% endblock %} 
 
-{% block content %}
-    <h1>Look @ all these posts!</h1>
+{% block content %}  
+
+  <h5>posts</h5>
+    {% for post in posts %}
+      <a href="#">
+        {% if post.content %}
+        <p>{{ post.content }}</p>
+        {% else %}
+        <img src="{{ post.photo.cdn_url }}-/resize/200x200/">
+        {% endif %}
+      </a>
+    {% endfor %}
         
 {% endblock %}
