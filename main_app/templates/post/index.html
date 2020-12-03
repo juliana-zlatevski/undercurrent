@@ -5,14 +5,13 @@ Recent Posts
 {% endblock %} 
 
 {% block content %}  
-
-  <h5>posts</h5>
+<a href='{% url 'create_post' %}' class='btn btn-outline-info mt-6'>+</a>
     {% for post in posts %}
       <a href="#">
         {% if post.content %}
         <p>{{ post.content }}</p>
         {% else %}
-        <img src="{{ post.photo.cdn_url }}-/resize/200x200/">
+        <img src="{{ post.photo.cdn_url }}">
         {% endif %}
       </a>
     {% endfor %}

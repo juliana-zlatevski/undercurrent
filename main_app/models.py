@@ -4,7 +4,7 @@ from pyuploadcare.dj.models import ImageField
 
 # Create your models here.
 class Post(models.Model):
-  content = models.TextField(max_length=140)
+  content = models.TextField(blank=True, max_length=140)
   timestamp = models.DateTimeField(auto_now_add=True)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   photo = ImageField(blank=True, manual_crop="")
