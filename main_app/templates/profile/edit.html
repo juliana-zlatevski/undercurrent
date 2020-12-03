@@ -11,6 +11,7 @@ Edit Profile
           <div class="card-content">
           <h6>Edit Profile</h6>
 
+          {{ form.media }}
           <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
