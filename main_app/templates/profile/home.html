@@ -14,9 +14,9 @@
             <h3>{{ profile.name }}</h3>
             <p>{{ profile.bio }}
             <p>Current city: {{ profile.location }}</p>
-            <p>Joined: {{ profile.join_date }}</p>
+            <p>Joined on: {{ profile.join_date }}</p>
           <div>
-            <a href="" type="submit" class="btn-small">
+            <a href="{% url 'edit_profile' profile.id %}" type="submit" class="btn btn-outline-info">
               Edit Profile</a>
             </div>
           </div>
