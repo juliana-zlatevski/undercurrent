@@ -9,6 +9,13 @@ def home(request):
   return render(request, 'home.html')
 
 # REGISTRATION & PROFILE RELATED VIEWS
+def profile(request):
+  print(request)
+  profile = Profile.objects.get(user = request.user)
+  posts = Post.objects.filter(user = request.user)
+  context = {'profile': profile, 'posts': posts}
+  return render(request, 'profile/home.html', context)
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
