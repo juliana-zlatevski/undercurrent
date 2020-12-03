@@ -9,8 +9,12 @@ class Post(models.Model):
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   photo = ImageField(blank=True, manual_crop="")
 
+  class Meta:
+    ordering = ['-id']
+
   def __str__(self):
     return self.content
+
 
 class Profile(models.Model):
     name = models.CharField(max_length=75)
