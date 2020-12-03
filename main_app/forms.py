@@ -8,3 +8,11 @@ class ProfileForm(forms.ModelForm):
     class Meta: 
         model = Profile
         fields = ['name', 'location', 'bio', 'photo']
+
+
+class PostForm(forms.ModelForm):
+    photo = ImageField(label='')
+
+    class Meta:
+        model = Post 
+        fields = ['content', 'photo']
