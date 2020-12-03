@@ -98,3 +98,18 @@ def delete_post(request, post_id):
     return redirect('posts')
   else:
     raise PermissionDenied("You can't delete someone else's post!")
+
+def edit_post(request, post_id):
+  post = Post.objects.get(id=post_id)
+  if request.user == post.user:
+    if request.method == 'POST':
+      post_form = PostForm(request.POST, instance=post)
+      if post_form.is_valid():
+        updated_post = post_form.save()
+        return redirect('post_details', updated_post.id)
+    else:
+      form = PostForm(instance=post)
+      context = {'form': form}
+      return render(request, 'post/edit.html', context)
+  else:
+    raise PermissionDenied("You can't edit someone else's post!")

@@ -20,8 +20,12 @@ post by {{ post.user }}
 
   <!-- Button trigger modal -->
   {% if request.user == post.user %}
+  <a href='{% url 'edit_post' post.id %}' 
+       type="button" 
+       class="btn btn-sm btn-outline-info">edit
+  </a>
   <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
-    delete post
+    delete
   </button>
   {% endif %}
 
