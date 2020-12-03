@@ -89,3 +89,11 @@ def post_details(request, post_id):
   post = Post.objects.get(id=post_id)
   context = {'post': post}
   return render(request, 'post/show.html', context)
+
+def delete_post(request, post_id):
+  post = Post.objects.get(id=post_id)
+  if request.user == post.user:
+    post.delete()
+    return redirect('posts')
+  else:
+    raise PermissionDenied("You can't delete someone else's post!")
