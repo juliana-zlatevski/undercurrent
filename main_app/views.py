@@ -65,3 +65,9 @@ def edit_profile(request, profile_id):
           return render(request, 'profile/edit.html', context)
   else: 
       raise PermissionDenied("You can't edit another user's profile!")
+
+# POST RELATED VIEWS
+def posts(request):
+  posts = Post.objects.all()
+  context = {'posts': posts}
+  return render(request, 'post/index.html', context)
