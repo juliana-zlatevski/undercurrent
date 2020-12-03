@@ -7,8 +7,13 @@
 <form method="post" action="{% url 'login' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" class="btn btn-outline-info" value="login">
+  <input type="submit" class="btn btn-sm btn-outline-info" value="login">
   <input type="hidden" name="next" value="{{ next }}">
 </form>
+
+<a href='{% url 'home' %}' 
+   type="button" 
+   class="btn btn-sm btn-outline-info">cancel
+</a>
 
 {% endblock %}

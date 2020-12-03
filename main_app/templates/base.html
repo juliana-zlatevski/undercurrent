@@ -41,14 +41,12 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'create_post' %}">+ new post</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'logout' %}">log out</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">account</a>
             <div class="dropdown-menu" aria-labelledby="dropdown08">
-              <a class="dropdown-item" href="{% url 'profile_home' user.profile.id %}">Profile Home</a>
-              <a class="dropdown-item" href="{% url 'edit_profile' user.profile.id %}">Edit Profile</a>
+              <a class="dropdown-item" href="{% url 'profile_home' user.profile.id %}">home</a>
+              <a class="dropdown-item" href="{% url 'edit_profile' user.profile.id %}">edit profile</a>
+              <a class="dropdown-item" href="{% url 'logout' %}">sign out</a>
             </div>
           </li>
           {% endif %}

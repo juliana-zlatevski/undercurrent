@@ -11,7 +11,12 @@
 <form method="post" action="{% url 'signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" class="btn btn-outline-info" value="signup">
+  <input type="submit" class="btn btn-sm btn-outline-info" value="signup">
 </form>
+
+  <a href='{% url 'home' %}' 
+     type="button" 
+     class="btn btn-sm btn-outline-info">cancel
+  </a>
 
 {% endblock %}
