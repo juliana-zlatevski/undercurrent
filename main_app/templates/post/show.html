@@ -20,7 +20,7 @@ post by {{ post.user }}
 
   <!-- Button trigger modal -->
   {% if request.user == post.user %}
-  <button type="button" class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#exampleModal">
+  <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
     delete post
   </button>
   {% endif %}
@@ -41,8 +41,8 @@ post by {{ post.user }}
         <div class="modal-footer">
           <button type="button" class="btn btn-sm btn-info" data-dismiss="modal">No, go back</button>
           <a href='{% url 'delete_post' post.id %}' 
-                  type="button" 
-                  class="btn btn-sm btn-danger">Yes, delete this post
+             type="button" 
+             class="btn btn-sm btn-danger">Yes, delete this post
           </a>
         </div>
       </div>
