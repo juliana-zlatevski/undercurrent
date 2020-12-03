@@ -29,14 +29,17 @@
           </li>
           {% if not user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'signup' %}">sign up</a>
+            <a class="nav-link" href="{% url 'login' %}">log in</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}">log in</a>
+            <a class="nav-link" href="{% url 'signup' %}">sign up</a>
           </li>
           {% else %}
           <li class="nav-item">
             <a class="nav-link" href="/">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">+ post</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'logout' %}">log out</a>
