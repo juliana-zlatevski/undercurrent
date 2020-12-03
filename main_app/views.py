@@ -71,3 +71,16 @@ def posts(request):
   posts = Post.objects.all()
   context = {'posts': posts}
   return render(request, 'post/index.html', context)
+
+def create_post(request):
+  if request.method == 'POST':
+    post_form = PostForm(request.POST)
+    if post_form.is_valid():
+      new_post = post_form.save(commit=False)
+      new_post.user = request.user
+      new_post.save()
+      return redirect('posts')
+  else:
+    form = PostForm()
+    context = {'form': form}
+    return render(request, 'post/new.html', context)

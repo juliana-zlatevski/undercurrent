@@ -10,5 +10,6 @@ urlpatterns = [
   path('accounts/profile/<int:profile_id>/', views.profile_home, name='profile_home'),
   path('profile/<int:profile_id>/edit', views.edit_profile, name='edit_profile'),
   # post related routes
-  path('posts/', views.posts, name='posts')
+  path('posts/', views.posts, name='posts'),
+  path('posts/create', views.create_post, name='create_post'),
 ]
