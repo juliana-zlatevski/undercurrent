@@ -84,3 +84,8 @@ def create_post(request):
     form = PostForm()
     context = {'form': form}
     return render(request, 'post/new.html', context)
+
+def post_details(request, post_id):
+  post = Post.objects.get(id=post_id)
+  context = {'post': post}
+  return render(request, 'post/show.html', context)
