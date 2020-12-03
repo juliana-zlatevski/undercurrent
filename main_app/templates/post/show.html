@@ -1,9 +1,18 @@
 {% extends 'base.html' %} 
 
 {% block title %} 
-post detail
+post by {{ post.user }}
 {% endblock %} 
 
 {% block content %}
-    <h1>a whole post</h1>
+  {% if post.photo %}
+    <img src="{{ post.photo.cdn_url }}">
+  {% else %}
+    <h4>{{ post.content }}</h4>
+  {% endif %}
+    <img class="avatar" src="{{ post.user.profile.photo.cdn_url }}-/resize/50x50/ }}">
+    <small>{{ post.timestamp }}</small>
+    <p>submitted by <a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a></p>
+
 {% endblock %}
+        

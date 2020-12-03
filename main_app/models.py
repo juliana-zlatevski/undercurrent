@@ -13,7 +13,7 @@ class Post(models.Model):
     ordering = ['-id']
 
   def __str__(self):
-    return self.content
+    return self.content, self.user
 
 
 class Profile(models.Model):
