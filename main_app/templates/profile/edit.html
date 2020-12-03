@@ -15,8 +15,9 @@ Edit Profile
           <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" class="btn btn-outline-info" value="save changes"> 
+            <input type="submit" class="btn btn-sm btn-outline-info" value="Save changes"> 
           </form>
+          <a href='{% url 'profile' %}' class='btn btn-sm btn-outline-info'>Cancel</a>
         </div>
       </div>
     </div>

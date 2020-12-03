@@ -10,7 +10,7 @@ post by {{ post.user }}
   {% else %}
     <h4>{{ post.content }}</h4>
   {% endif %}
-    <img class="avatar" src="{{ post.user.profile.photo.cdn_url }}-/resize/50x50/ }}">
+    <img src="{{ post.user.profile.photo.cdn_url }}-/resize/50x50/ }}">
     <small>{{ post.timestamp }}</small>
     <p>submitted by <a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a></p>
 
