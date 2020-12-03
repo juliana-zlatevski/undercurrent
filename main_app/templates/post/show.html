@@ -13,6 +13,10 @@ post by {{ post.user }}
     <img src="{{ post.user.profile.photo.cdn_url }}-/resize/50x50/ }}">
     <small>{{ post.timestamp }}</small>
     <p>submitted by <a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a></p>
+    <a href='{% url 'posts' %}' 
+       type="button" 
+       class="btn btn-sm btn-outline-info">back to feed
+    </a>
 
   <!-- Button trigger modal -->
   {% if request.user == post.user %}

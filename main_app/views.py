@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
+from django.core.exceptions import PermissionDenied
 from django.contrib.auth.forms import UserCreationForm
 from .forms import ProfileForm, PostForm
 from .models import Profile, Post
