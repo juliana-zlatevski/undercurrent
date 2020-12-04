@@ -12,8 +12,9 @@ body {
   float: left;
   width: 30%;
   margin: 1%;
-  padding: 1%;
-  border: 3px solid blue;
+  padding: 3%;
+  background-color: rgb(240, 239, 239);
+  border-radius: 20px;
 }
 
 .right {
@@ -154,4 +155,32 @@ textarea {
   background-color: black;
 }
 
+.joined {
+  text-transform: lowercase;
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  margin-top: 20px;
+}
+
+.profile-card-text {
+  text-align: center;
+  margin: 0px;
+}
+
+.profile-buttons {
+  text-align: center;
+}
+
+.profile-name {
+  text-align: center;
+  padding: 10px;
+  color: #7791B2;
+}
+
+.avatar {
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+}
  
