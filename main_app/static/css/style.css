@@ -6,8 +6,25 @@ body {
 
 .container {
   flex: 1 0 auto;
+  border: 3px solid red;
 }
 
 .card {
-  border: none;
+  border: 3px solid blue;
+}
+
+.left {
+  float: left;
+  width: 30%;
+  margin: 1%;
+  padding: 1%;
+  border: 3px solid blue;
+}
+
+.right {
+  float: right;
+  width: 65%;
+  margin: 1%;
+  padding: 1%;
+  border: 3px solid blue;
 }
