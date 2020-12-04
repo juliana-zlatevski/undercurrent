@@ -2,7 +2,7 @@
 {% block content %}
 
 <h2>Welcome!</h2>
-<h5>Sign up below:</h5>
+<h5>Please sign up below:</h5>
 
 {% if error_message %}
   <h6 class="red-text">{{ error_message }}</h6>
@@ -11,7 +11,7 @@
 <form method="post" action="{% url 'signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" class="btn btn-sm btn-outline-info" value="signup">
+  <input type="submit" class="btn btn-sm btn-outline-info" value="sign up">
 </form>
 
   <a href='{% url 'home' %}' 
