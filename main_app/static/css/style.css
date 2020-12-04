@@ -35,12 +35,40 @@ body {
   margin: 1%;
   padding: 1%;
   border: 3px solid blue;
+  z-index: 1;
+  position: fixed;
+  bottom: 120px;
+  color: white;
 }
 
 .home-right {
   float: right;
-  width: 45%;
+  width: 25%;
   margin: 1%;
   padding: 1%;
   border: 3px solid blue;
+}
+
+.home-photo-1 {
+  position: fixed;
+  bottom: 60px;
+  left: 260px;
+  width: 350px;
+  z-index: -1;
+}
+
+.home-photo-2 {
+  position: absolute;
+  left: 600px;
+  bottom: 110px;
+  width: 340px;
+  z-index: -2;
+}
+
+.home-photo-3 {
+  position: absolute;
+  left: 880px;
+  bottom: 260px;
+  width: 300px;
+  z-index: -3;
 }
