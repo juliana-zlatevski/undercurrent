@@ -18,10 +18,12 @@
               {{ profile.location }}</p>
             <p>Joined: {{ profile.join_date }}</p>
             <div>
+              {% if request.user == profile.user %}
               <a href="{% url 'edit_profile' profile.id %}" type="submit" 
               class="btn btn-sm btn-outline-info">Edit Profile</a>
               <a href="{% url 'create_post' %}" type="submit" 
               class="btn btn-sm btn-outline-info">+ Post</a>
+              {% endif %}
             </div>
           </div>
         </div>

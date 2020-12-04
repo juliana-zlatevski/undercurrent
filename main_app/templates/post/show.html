@@ -5,12 +5,9 @@ post by {{ post.user }}
 {% endblock %} 
 
 {% block content %}
-  {% if post.photo %}
     <img src="{{ post.photo.cdn_url }}">
-  {% else %}
-    <h4>{{ post.content }}</h4>
-  {% endif %}
-    <img src="{{ post.user.profile.photo.cdn_url }}-/resize/50x50/ }}">
+    <a href="{% url 'profile_home' post.user.id %}">
+    <img src="{{ post.user.profile.photo.cdn_url }}-/resize/75x75/ }}"></a>
     <small>{{ post.timestamp }}</small>
     <p>submitted by <a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a></p>
     <a href='{% url 'posts' %}' 
@@ -22,7 +19,7 @@ post by {{ post.user }}
   {% if request.user == post.user %}
   <a href='{% url 'edit_post' post.id %}' 
        type="button" 
-       class="btn btn-sm btn-outline-info">edit
+       class="btn btn-sm btn-outline-info">edit post
   </a>
   <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
     delete
