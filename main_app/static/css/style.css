@@ -101,7 +101,9 @@ body {
 #id_username, 
 #id_password, 
 #id_password1, 
-#id_password2 {
+#id_password2,
+#id_name,
+#id_location {
   color: rgb(153, 151, 151);
   font-family: menlo;
   border: 0px;
@@ -113,8 +115,43 @@ label {
   text-transform: lowercase;
   font-size: 12px;
   text-align: right;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.uploadcare--link,
+.uploadcare--widget__file-size {
+  font-family: menlo;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .helptext {
   display: none;
 }
+
+textarea {
+  margin-left: -45px !important;
+  border-width: 0px !important;
+  border-bottom: 1px solid black !important;
+  margin-bottom: 20px !important;
+  height: 110px !important;
+  width: 330px !important;
+  font-family: menlo !important;
+}
+
+.uploadcare--widget__button,
+.uploadcare--button {
+  background-color: #7791B2;
+  text-transform: lowercase;
+  border: 0px;
+}
+
+.uploadcare--widget__button:hover,
+.uploadcare--button:hover {
+  background-color: black;
+}
+
+ 
