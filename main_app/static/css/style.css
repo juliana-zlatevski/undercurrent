@@ -86,3 +86,24 @@ body {
 #nav-logo {
   font-weight: bold;
 }
+
+.login-container {
+  width: 30%;
+  margin: 0 auto;
+  padding-top: 100px;
+  text-align: center;
+}
+
+#id_username, #id_password {
+  color: rgb(153, 151, 151);
+  font-family: menlo;
+  border: 0px;
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+
+label {
+  font-family: menlo;
+  text-transform: lowercase;
+  font-size: 12px;
+}
