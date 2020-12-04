@@ -40,6 +40,7 @@
 - PostgreSQL
 - jQuery
 - Bootstrap
+- Uploadcare
 - Custom CSS
 
 **Future Plans for App:**
