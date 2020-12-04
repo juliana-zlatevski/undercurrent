@@ -5,27 +5,29 @@ post by {{ post.user }}
 {% endblock %} 
 
 {% block content %}
-    <img src="{{ post.photo.cdn_url }}">
+  <div class='photo-show-box'>
+    <img src="{{ post.photo.cdn_url }}"> </div>
+  <div class='photo-show-details'>
     <a href="{% url 'profile_home' post.user.id %}">
-    <img src="{{ post.user.profile.photo.cdn_url }}-/resize/75x75/ }}"></a>
-    <small>{{ post.timestamp }}</small>
+    <img class='mini-avatar' src="{{ post.user.profile.photo.cdn_url }}-/resize/75x75/ }}"></a>
+    <p>{{ post.timestamp }}</p>
     <p>submitted by <a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a></p>
     <a href='{% url 'posts' %}' 
        type="button" 
-       class="btn btn-sm btn-outline-info">back to feed
+       class="btn btn-sm btn-outline-dark">back to feed
     </a>
 
   <!-- Button trigger modal -->
   {% if request.user == post.user %}
   <a href='{% url 'edit_post' post.id %}' 
        type="button" 
-       class="btn btn-sm btn-outline-info">edit post
+       class="btn btn-sm btn-outline-dark">edit post
   </a>
   <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
     delete
   </button>
   {% endif %}
-
+</div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
