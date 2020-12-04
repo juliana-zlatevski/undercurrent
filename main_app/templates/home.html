@@ -5,11 +5,24 @@ Undercurrent. It's the state we're in.
 {% endblock title %}
     
 {% block content %}
-<h1>undercurrent</h1>
-<div>
-<h3>un·der·cur·rent</h3>
-<p>/ˈəndərˌkərənt/</p>
-<p>noun</p>
-<p>1. an underlying feeling or influence, especially one that is contrary to the prevailing atmosphere and is not expressed openly.</p>
+<div class='home-left'>
+  <h1>undercurrent</h1>
+    <div>
+      <h3>un·der·cur·rent</h3>
+      <p>/ˈəndərˌkərənt/</p>
+      <p>noun</p>
+      <p>1. an underlying feeling or influence, especially one that is contrary to the prevailing atmosphere and is not expressed openly.</p>
+    </div>
 </div>
+
+<div class='home-right'>
+  {% if not user.is_authenticated %}
+    <a href='{% url 'login' %}'><h1>log in</h1></a>
+    <a href='{% url 'signup' %}'><h1>sign up</h1></a>
+  {% else %}
+    <a href='{% url 'posts' %}'><h1>see what's happening</h1></a>
+    <a href='{% url 'profile_home' user.id %}'><h1>profile home</h1></a>
+  {% endif %}
+</div>
+
 {% endblock content %}

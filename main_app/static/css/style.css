@@ -28,3 +28,19 @@ body {
   padding: 1%;
   border: 3px solid blue;
 }
+
+.home-left {
+  float: left;
+  width: 50%;
+  margin: 1%;
+  padding: 1%;
+  border: 3px solid blue;
+}
+
+.home-right {
+  float: right;
+  width: 45%;
+  margin: 1%;
+  padding: 1%;
+  border: 3px solid blue;
+}
