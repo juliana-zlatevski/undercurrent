@@ -206,6 +206,7 @@ textarea {
 
 .mini-avatar {
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .photo-show-box {
@@ -222,4 +223,39 @@ textarea {
   top: 150px;
   padding: 20px;
   margin: 20px;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.post-index-feed-container {
+  padding-top: 20px;
+}
+
+.index-gallery {
+  margin: auto;
+  display: block;
+  position: relative;
+  width: 50%;
+  padding: 20px;
+}
+
+.photo-show-info {
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+a {
+  color: #7791B2;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #A19394 !important;
+  transition: 0.3s;
 }

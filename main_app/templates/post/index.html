@@ -5,15 +5,16 @@ post feed
 {% endblock %} 
 
 {% block content %}  
-  <a href='{% url 'create_post' %}' class='btn btn-sm btn-outline-info mt-6'>+ new post</a>
+
+  <div class='post-index-feed-container'>
     {% for post in posts %}
       <a href='{% url 'post_details' post.id %}'>
         {% if post.content %}
         <p>{{ post.content }}</p>
         {% else %}
-        <img src="{{ post.photo.cdn_url }}">
+        <img class='index-gallery' src="{{ post.photo.cdn_url }}">
         {% endif %}
       </a>
     {% endfor %}
-        
+  </div>  
 {% endblock %}

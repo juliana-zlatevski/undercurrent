@@ -10,20 +10,19 @@ post by {{ post.user }}
   <div class='photo-show-details'>
     <a href="{% url 'profile_home' post.user.id %}">
     <img class='mini-avatar' src="{{ post.user.profile.photo.cdn_url }}-/resize/75x75/ }}"></a>
-    <p>{{ post.timestamp }}</p>
-    <p>submitted by <a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a></p>
+    <p class='photo-show-info'>submitted by <a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a> on: {{ post.timestamp }}</p>
     <a href='{% url 'posts' %}' 
        type="button" 
-       class="btn btn-sm btn-outline-dark">back to feed
+       class="btn btn-sm btn-outline-dark mt-3">back to feed
     </a>
 
   <!-- Button trigger modal -->
   {% if request.user == post.user %}
   <a href='{% url 'edit_post' post.id %}' 
        type="button" 
-       class="btn btn-sm btn-outline-dark">edit post
+       class="btn btn-sm btn-outline-dark mt-3">edit post
   </a>
-  <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+  <button type="button" class="btn btn-sm btn-outline-danger mt-3" data-toggle="modal" data-target="#exampleModal">
     delete
   </button>
   {% endif %}
