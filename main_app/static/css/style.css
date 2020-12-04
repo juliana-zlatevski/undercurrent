@@ -188,3 +188,8 @@ textarea {
   position: relative;
   padding: 5px;
 }
+
+.card {
+  border: 0px;
+  width: 50%;
+}
