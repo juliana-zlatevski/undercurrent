@@ -8,10 +8,6 @@ body {
   flex: 1 0 auto;
 }
 
-.card {
-  border: 3px solid purple;
-}
-
 .left {
   float: left;
   width: 30%;
@@ -36,29 +32,30 @@ body {
   z-index: 1;
   position: fixed;
   bottom: 270px;
+  left: 90px;
   color: white;
 }
 
 .home-photo-1 {
   position: fixed;
   bottom: 40px;
-  left: 280px;
-  width: 420px;
+  left: 420px;
+  width: 400px;
   z-index: -2;
 }
 
 .home-photo-2 {
   position: absolute;
-  left: 670px;
-  bottom: 113px;
+  left: 780px;
+  bottom: 100px;
   width: 400px;
   z-index: -3;
 }
 
 .home-photo-3 {
   position: absolute;
-  left: 920px;
-  bottom: 246px;
+  left: 1020px;
+  bottom: 160px;
   width: 350px;
   z-index: -4;
 }
