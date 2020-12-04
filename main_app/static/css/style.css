@@ -87,14 +87,21 @@ body {
   font-weight: bold;
 }
 
-.login-container {
-  width: 30%;
+.registration-container {
+  width: 40%;
   margin: 0 auto;
-  padding-top: 100px;
+  padding: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 50px;
 }
 
-#id_username, #id_password {
+#id_username, 
+#id_password, 
+#id_password1, 
+#id_password2 {
   color: rgb(153, 151, 151);
   font-family: menlo;
   border: 0px;
@@ -106,4 +113,9 @@ label {
   font-family: menlo;
   text-transform: lowercase;
   font-size: 12px;
+  text-align: right;
+}
+
+.helptext {
+  display: none;
 }

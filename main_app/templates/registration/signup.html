@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
-{% block content %}
+{% block title %}
+sign up
+{% endblock title %}
 
-<h2>Welcome!</h2>
-<h5>Please sign up below:</h5>
+{% block content %}
+<div class='registration-container'>
+  <h1>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-lightning" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"/>
+  </svg></h1>
+
+<h5>welcome</h5>
+<p>sign up to create, discover + express yourself:</p>
 
 {% if error_message %}
   <h6 class="red-text">{{ error_message }}</h6>
@@ -11,12 +20,12 @@
 <form method="post" action="{% url 'signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" class="btn btn-sm btn-outline-info" value="sign up">
+  <input type="submit" class="btn btn-sm btn-outline-dark mb-2 mt-4" value="sign up">
 </form>
 
   <a href='{% url 'home' %}' 
      type="button" 
-     class="btn btn-sm btn-outline-info">cancel
+     class="btn btn-sm btn-outline-dark mb-2">cancel
   </a>
-
+</div>
 {% endblock %}
