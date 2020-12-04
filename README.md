@@ -34,6 +34,14 @@
 
 ---
 
+**Technologies Used:**
+- Django
+- Python
+- PostgreSQL
+- jQuery
+- Bootstrap
+- Custom CSS
+
 **Future Plans for App:**
 
 1. Add hashtags and make posts searchable/discoverable so that users can find and follow other people based on the types of posts they share.
