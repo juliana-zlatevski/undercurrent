@@ -193,3 +193,13 @@ textarea {
   border: 0px;
   width: 50%;
 }
+
+.new-post-container {
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px;
+  margin-top: 100px;
+}

@@ -6,7 +6,8 @@
 
 {% block content %}
 
-  <h1>+ new post</h1>
+<div class='new-post-container'>
+  <h1>+ create a new post</h1>
 
   {{ form.media }}
 
@@ -14,8 +15,8 @@
     {% csrf_token %}
     {{form.as_p}}
 
-    <input class='btn btn-sm btn-outline-info' type='submit' value="submit">
+    <input class='btn btn-sm btn-outline-dark mb-2' type='submit' value="submit">
   </form>
-  <a href='{% url 'posts' %}' class='btn btn-sm btn-outline-info'>cancel</a>
-
+  <a href='{% url 'posts' %}' class='btn btn-sm btn-outline-dark mb-2'>cancel</a>
+</div>
 {% endblock %}
