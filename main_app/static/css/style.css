@@ -31,10 +31,9 @@ body {
 
 .home-left {
   float: left;
-  width: 50%;
+  width: 30%;
   margin: 1%;
   padding: 1%;
-  border: 3px solid blue;
   z-index: 1;
   position: fixed;
   bottom: 120px;
@@ -43,32 +42,45 @@ body {
 
 .home-right {
   float: right;
-  width: 25%;
+  width: 20%;
   margin: 1%;
   padding: 1%;
-  border: 3px solid blue;
+  z-index: 1;
+  position: relative;
+  bottom: -330px;
+  right: 10px;
 }
 
 .home-photo-1 {
   position: fixed;
-  bottom: 60px;
-  left: 260px;
-  width: 350px;
-  z-index: -1;
+  bottom: 40px;
+  left: 280px;
+  width: 420px;
+  z-index: -2;
 }
 
 .home-photo-2 {
   position: absolute;
-  left: 600px;
-  bottom: 110px;
-  width: 340px;
-  z-index: -2;
+  left: 670px;
+  bottom: 113px;
+  width: 400px;
+  z-index: -3;
 }
 
 .home-photo-3 {
   position: absolute;
   left: 880px;
-  bottom: 260px;
-  width: 300px;
-  z-index: -3;
+  bottom: 246px;
+  width: 350px;
+  z-index: -4;
+}
+
+#home-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 1500px;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -5;
 }

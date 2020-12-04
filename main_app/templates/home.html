@@ -5,6 +5,10 @@ undercurrent. a place to express yourself.
 {% endblock title %}
     
 {% block content %}
+<video autoplay muted loop id="home-video">
+  <source src="/static/videos/video.mp4" type="video/mp4">
+</video>
+
 <div class='home-photos'>
   <img class='home-photo-1' src='/static/photos/pexels-photo-2377470.jpeg'>
   <img class='home-photo-2' src='/static/photos/pexels-photo-3482526.jpeg'>
@@ -17,7 +21,7 @@ undercurrent. a place to express yourself.
       <h3>un·der·cur·rent</h3>
       <p>/ˈəndərˌkərənt/</p>
       <p>noun</p>
-      <p>1. an underlying feeling or influence</p>
+      <p>1. an underlying feeling or influence.</p>
     </div>
 </div>
 
@@ -27,7 +31,6 @@ undercurrent. a place to express yourself.
     <a href='{% url 'signup' %}'><h1>sign up</h1></a>
   {% else %}
     <a href='{% url 'posts' %}'><h1>see what's happening</h1></a>
-    <a href='{% url 'profile_home' user.id %}'><h1>profile home</h1></a>
   {% endif %}
 </div>
 
