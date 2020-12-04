@@ -40,7 +40,7 @@ body {
   position: fixed;
   bottom: 40px;
   left: 420px;
-  width: 400px;
+  width: 380px;
   z-index: -2;
 }
 
@@ -72,4 +72,17 @@ body {
 
 .home-btn {
   margin-bottom: 0px;
+}
+
+#navbar {
+  color: black !important;
+  background-color: white !important;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+#nav-logo {
+  font-weight: bold;
 }
