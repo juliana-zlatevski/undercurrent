@@ -13,7 +13,7 @@ body {
   width: 30%;
   margin: 1%;
   padding: 3%;
-  background-color: rgb(240, 239, 239);
+  background-color: rgb(245, 245, 245);
   border-radius: 20px;
 }
 
@@ -22,7 +22,6 @@ body {
   width: 65%;
   margin: 1%;
   padding: 1%;
-  border: 3px solid blue;
 }
 
 .home-left {
@@ -183,4 +182,9 @@ textarea {
   display: block;
   border-radius: 50%;
 }
- 
+
+.gallery-img {
+  width: 32%;
+  position: relative;
+  padding: 5px;
+}

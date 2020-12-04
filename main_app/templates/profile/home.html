@@ -33,16 +33,18 @@
     </div>
   </div>
 <div class='right'>
-  <div>
+  <div class='photo-box'>
+  <div class='image'>
     {% for post in posts %}
       <a href='{% url 'post_details' post.id %}'>
         {% if post.content %}
         <p>{{ post.content }}</p>
         {% else %}
-        <img src="{{ post.photo.cdn_url }}">
+        <img class='gallery-img' src="{{ post.photo.cdn_url }}">
         {% endif %}
       </a>
     {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}
