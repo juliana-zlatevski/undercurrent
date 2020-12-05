@@ -265,3 +265,24 @@ a:hover {
   text-align: center;
   width: 70%;
 }
+
+.dropdown-menu {
+  border: 1px solid #7791B2 !important;
+  border-radius: 15px !important;
+}
+
+.dropdown-item {
+  padding: 0px !important;
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background-color: transparent !important;
+  color: #A19394;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon {
+  color: #7791B2;
+  font-size: 32px;
+}
