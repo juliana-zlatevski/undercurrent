@@ -36,24 +36,25 @@
 <div class='right'>
   <div class='photo-box'>
   <div class='image'>
-  {% if not post in posts %}
-  <div class='no-posts'>
-    <h1>no posts, yet...</h1>
-      <a href="{% url 'create_post' %}" 
-         type="submit">+ add your first post
-      </a>
-  </div>
-  {% else %}
+    {% if not posts %}
+      <div class='no-posts'>
+      <h1>no posts, yet...</h1>
+        {% if request.user == profile.user %}
+          <a href="{% url 'create_post' %}" 
+            type="submit">+ add your first post
+          </a>
+        {% else %}
+          <a href="{% url 'posts' %}" 
+            type="submit">back to feed
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
     {% for post in posts %}
       <a href='{% url 'post_details' post.id %}'>
-        {% if post.content %}
-        <p>{{ post.content }}</p>
-        {% else %}
         <img class='gallery-img' src="{{ post.photo.cdn_url }}">
-        {% endif %}
       </a>
     {% endfor %}
-  {% endif %}
     </div>
   </div>
 </div>

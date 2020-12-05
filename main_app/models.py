@@ -14,7 +14,6 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
-
 class Post(models.Model):
   timestamp = models.DateTimeField(auto_now_add=True)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -24,5 +23,6 @@ class Post(models.Model):
     ordering = ['-id']
 
   def __str__(self):
-    return self.content, self.user
+    return self.user.username
+
 

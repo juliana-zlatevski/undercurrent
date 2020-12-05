@@ -23,7 +23,6 @@ def signup(request):
     form = UserCreationForm(request.POST)
     if form.is_valid():
       user = form.save()
-      print('USER------------------->', user)
       login(request, user)
       return redirect('new_profile')
     else:
@@ -39,7 +38,6 @@ def new_profile(request):
       new_profile = form.save(commit=False)
       new_profile.user = request.user
       new_profile.save()
-      print('NEW_PROFILE---------------------------->', new_profile)
       return redirect('profile_home', new_profile.id)
     else:
       return render(request, 'profile/new.html', {'form': form})
@@ -49,10 +47,10 @@ def new_profile(request):
     return render(request, 'profile/new.html', context)
 
 def profile_home(request, profile_id):
-  print('REQUEST--------------------------------->', profile_id)
   profile = Profile.objects.get(user = profile_id)
   posts = Post.objects.filter(user = profile_id)
   print('POSTS LOG-------------------------------------->', posts)
+  print('PROFILE LOG------------------------------------>', profile)
   context = {'profile': profile, 'posts': posts}
   return render(request, 'profile/home.html', context)
 
