@@ -52,6 +52,7 @@ def profile_home(request, profile_id):
   print('REQUEST--------------------------------->', profile_id)
   profile = Profile.objects.get(user = profile_id)
   posts = Post.objects.filter(user = profile_id)
+  print('POSTS LOG-------------------------------------->', posts)
   context = {'profile': profile, 'posts': posts}
   return render(request, 'profile/home.html', context)
 

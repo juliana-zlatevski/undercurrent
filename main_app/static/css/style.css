@@ -259,3 +259,10 @@ a:hover {
   color: #A19394 !important;
   transition: 0.3s;
 }
+
+.no-posts {
+  border: 1px solid blue;
+  padding-top: 170px;
+  text-align: center;
+  width: 70%;
+}
