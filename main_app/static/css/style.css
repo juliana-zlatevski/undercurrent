@@ -245,7 +245,7 @@ textarea {
   display: block;
   position: relative;
   width: 50%;
-  padding: 20px;
+  padding: 2px;
 }
 
 .photo-show-info {
@@ -356,6 +356,21 @@ a:hover {
   .photo-show-box img {
     width: 90%;
   }
+}
+
+.post-index-feed-container {
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    3;
+  -moz-column-gap:      0px;
+  column-count:         3;
+  column-gap:           0px;  
+}
+
+.post-index-feed-container img {
+  width: 100% !important;
+  height: auto !important;
 }
 
 @media (max-width: 1000px) {
