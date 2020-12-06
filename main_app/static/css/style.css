@@ -234,6 +234,7 @@ textarea {
 .photo-show-box img {
   display: block;
   margin: auto;
+  max-width: 1000px;
 }
 
 .photo-show-details {
