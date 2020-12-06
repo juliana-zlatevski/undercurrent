@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+from .keys import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(gw$2j)8dron0_ga6$%%admlqtt^)7_r#^ur7^rld&-fw$&do('
+SECRET_KEY = django_secret
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -60,7 +61,7 @@ TEMPLATES = [
 
 UPLOADCARE = {
     "pub_key": 'e77c887d8804e829cf47',
-    "secret": '8d18d287f40c65a2e362',
+    "secret": uploadcare_secret,
 }
 
 WSGI_APPLICATION = 'undercurrent.wsgi.application'
