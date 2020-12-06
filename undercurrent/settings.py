@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = django_secret
+SECRET_KEY = '(gw$2j)8dron0_ga6$%%admlqtt^)7_r#^ur7^rld&-fw$&do('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -62,7 +62,7 @@ TEMPLATES = [
 
 UPLOADCARE = {
     "pub_key": 'e77c887d8804e829cf47',
-    "secret": uploadcare_secret,
+    "secret": '8d18d287f40c65a2e362',
 }
 
 WSGI_APPLICATION = 'undercurrent.wsgi.application'
