@@ -139,8 +139,8 @@ textarea {
   border-width: 0px !important;
   border-bottom: 1px solid black !important;
   margin-bottom: 20px !important;
-  height: 110px !important;
-  width: 330px !important;
+  height: 100px !important;
+  width: 100% !important;
   font-family: menlo !important;
 }
 
@@ -294,6 +294,7 @@ a:hover {
 .navbar-toggler-icon {
   color: #7791B2;
   font-size: 32px;
+  text-align: center;
 }
 
 .image {
@@ -310,4 +311,132 @@ a:hover {
 .image img {
   width: 100% !important;
   height: auto !important;
+}
+
+@media (max-width: 500px) {
+  .image {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+  .left {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .right {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .no-posts {
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+  }
+  textarea {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .registration-container {
+    width: 100%;
+    padding: 20px;
+  }
+  .new-post-container {
+    width: 100%;
+  }
+  #id_username, 
+  #id_password, 
+  #id_password1, 
+  #id_password2,
+  #id_name,
+  #id_location {
+  width: 100%;
+  }
+  .photo-show-box img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .registration-container {
+    width: 50%;
+    padding: 10px;
+  }
+  .left {
+    width: 30%;
+    padding: 5px;
+  }
+  .right {
+    width: 60%;
+    padding: 5px;
+  }
+  .no-posts {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .image {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+  .left {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  .right {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .no-posts {
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+  }
+  textarea {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .registration-container {
+    width: 100%;
+    padding: 20px;
+  }
+  .new-post-container {
+    width: 100%;
+  }
+  #id_username, 
+  #id_password, 
+  #id_password1, 
+  #id_password2,
+  #id_name,
+  #id_location {
+  width: 100%;
+  }
+  .photo-show-box img {
+    width: 90%;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 499px) {
+  .left {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .right {
+    width: 100%;
+  }
+  .registration-container {
+    width: 100%;
+    padding: 10px;
+  }
 }

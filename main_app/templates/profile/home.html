@@ -37,7 +37,6 @@
 
 <div class='right'>
   <div class='photo-box'>
-  <div class='image'>
     {% if not posts %}
       <div class='no-posts'>
       <h1>no posts, yet...</h1>
@@ -52,6 +51,7 @@
         {% endif %}
       </div>
     {% endif %}
+    <div class='image'>
     {% for post in posts %}
       <a href='{% url 'post_details' post.id %}'>
         <img class='gallery-img' src="{{ post.photo.cdn_url }}">
