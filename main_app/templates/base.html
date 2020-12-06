@@ -32,10 +32,10 @@
           <li class="nav-item active">
             <a class="nav-link" id='nav-logo' href="/">undercurrent<span class="sr-only">(current)</span></a>
           </li>
-          {% if not user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'posts' %}">feed</a>
           </li>
+          {% if not user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'signup' %}">sign up</a>
           </li>
