@@ -106,10 +106,10 @@ body {
 #id_password2,
 #id_name,
 #id_location {
-  color: rgb(153, 151, 151);
+  color: black(153, 151, 151);
   font-family: menlo;
-  border: 0px;
-  border-bottom: 1px solid black;
+  font-size: 12px;
+  border-bottom: 1px solid #7791B2;
 }
 
 #id_bio {
@@ -142,11 +142,13 @@ label {
 
 textarea {
   border-width: 0px !important;
-  border-bottom: 1px solid black !important;
-  margin-bottom: 20px !important;
-  height: 50px !important;
+  border: 1px solid #7791B2 !important;
+  border-radius: 20px;
+  margin-bottom: 0px !important;
+  height: 100px !important;
   width: 100% !important;
   font-family: menlo !important;
+  font-size: 12px;
 }
 
 .uploadcare--widget__button,
