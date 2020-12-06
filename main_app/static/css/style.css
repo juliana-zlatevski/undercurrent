@@ -112,13 +112,19 @@ body {
   border-bottom: 1px solid black;
 }
 
+#id_bio {
+  width: 90%;
+  margin: 0 auto;
+}
+
 label {
   font-family: menlo;
   text-transform: lowercase;
   font-size: 12px;
-  text-align: right;
+  text-align: center;
   padding-bottom: 5px;
-  padding-top: 5px;
+  padding-top: 15px;
+  display: block;
 }
 
 .uploadcare--link,
@@ -135,11 +141,10 @@ label {
 }
 
 textarea {
-  margin-left: -45px !important;
   border-width: 0px !important;
   border-bottom: 1px solid black !important;
   margin-bottom: 20px !important;
-  height: 100px !important;
+  height: 50px !important;
   width: 100% !important;
   font-family: menlo !important;
 }
@@ -480,6 +485,9 @@ a:hover {
     display: block;
     margin-left: -145%;
     position: absolute;
+  }
+  .home-text {
+    width: 100%;
   }
 }
 
