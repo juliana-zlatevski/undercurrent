@@ -109,7 +109,9 @@ body {
   color: black(153, 151, 151);
   font-family: menlo;
   font-size: 12px;
+  border: 0px;
   border-bottom: 1px solid #7791B2;
+  padding: 5px;
 }
 
 #id_bio {
@@ -149,6 +151,7 @@ textarea {
   width: 100% !important;
   font-family: menlo !important;
   font-size: 12px;
+  padding: 5px;
 }
 
 .uploadcare--widget__button,
