@@ -2,6 +2,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: 'Karla', sans-serif;
 }
 
 .container {
@@ -192,7 +193,6 @@ textarea {
   padding: 10px;
   padding-bottom: 0px;
   color: #7791B2;
-  letter-spacing: 2px;
 }
 
 .username {
