@@ -60,8 +60,8 @@ TEMPLATES = [
 ]
 
 UPLOADCARE = {
-    "pub_key": 'e77c887d8804e829cf47',
-    "secret": '8d18d287f40c65a2e362',
+    "pub_key": '51650035694fd99a79c2',
+    "secret": 'd09e66d630aa4e5927a5',
 }
 
 WSGI_APPLICATION = 'undercurrent.wsgi.application'
