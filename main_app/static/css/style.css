@@ -455,3 +455,33 @@ a:hover {
     padding: 10px;
   }
 }
+
+@media (max-width: 375px) {
+  #home-video {
+    height: 100%;
+  }
+  #navbar {
+    margin-left: -20px !important;
+  }
+  .home-photo-1 {
+    width: 25%;
+    display: block;
+    margin-left: -40%;
+    position: absolute;
+  }
+  .home-photo-2 {
+    width: 25%;
+    display: block;
+    margin-left: -112%;
+    position: absolute;
+  }
+  .home-photo-3 {
+    width: 20%;
+    display: block;
+    margin-left: -145%;
+    position: absolute;
+  }
+}
+
+
+

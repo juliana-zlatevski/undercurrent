@@ -24,8 +24,8 @@ undercurrent. a place to express yourself.
     </div>
   <div>
   {% if not user.is_authenticated %}
-    <a class='btn btn btn-dark' href='{% url 'login' %}'><h5 class='home-btn'>log in</h5></a>
-    <a class='btn btn btn-dark' href='{% url 'signup' %}'><h5 class='home-btn'>sign up</h5></a>
+    <a class='btn btn btn-dark mb-2' href='{% url 'login' %}'><h5 class='home-btn'>log in</h5></a>
+    <a class='btn btn btn-dark mb-2' href='{% url 'signup' %}'><h5 class='home-btn'>sign up</h5></a>
   {% else %}
     <a class='btn btn btn-dark' href='{% url 'posts' %}'><h class='home-btn'>see what's happening</h></a>
   {% endif %}
