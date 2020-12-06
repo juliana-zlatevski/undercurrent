@@ -6,27 +6,19 @@ post by {{ post.user }}
 
 {% block content %}
   <div class='photo-show-box'>
-    <img src="{{ post.photo.cdn_url }}"> </div>
+    <img src="{{ post.photo.cdn_url }}"> 
+  </div>
   <div class='photo-show-details'>
-    <a href="{% url 'profile_home' post.user.id %}">
-    <img class='mini-avatar' src="{{ post.user.profile.photo.cdn_url }}-/resize/75x75/ }}"></a>
-    <p class='photo-show-info'>submitted by <a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a> on: {{ post.timestamp }}</p>
-    <a href='{% url 'posts' %}' 
-       type="button" 
-       class="btn btn-sm btn-outline-dark mt-3">back to feed
-    </a>
+    <p class='photo-show-info'>submitted by [ @<a href="{% url 'profile_home' post.user.id %}">{{ post.user }}</a> ] / {{ post.timestamp }}</p>
+    <a href='{% url 'posts' %}'>back to feed </a>
 
   <!-- Button trigger modal -->
   {% if request.user == post.user %}
-  <a href='{% url 'edit_post' post.id %}' 
-       type="button" 
-       class="btn btn-sm btn-outline-dark mt-3">edit post
-  </a>
-  <button type="button" class="btn btn-sm btn-outline-danger mt-3" data-toggle="modal" data-target="#exampleModal">
-    delete
-  </button>
+  <a href='{% url 'edit_post' post.id %}'> / edit post</a>
+  <a href="" data-toggle="modal" data-target="#exampleModal"> / delete post</a>
   {% endif %}
-</div>
+</div></div>
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -41,7 +33,7 @@ post by {{ post.user }}
           Are you sure you want to delete this post? This action cannot be undone.
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-sm btn-info" data-dismiss="modal">No, go back</button>
+          <button type="button" class="btn btn-sm btn-outline-dark" data-dismiss="modal">No, go back</button>
           <a href='{% url 'delete_post' post.id %}' 
              type="button" 
              class="btn btn-sm btn-danger">Yes, delete this post

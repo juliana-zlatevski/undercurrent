@@ -10,18 +10,20 @@ body {
 
 .left {
   float: left;
-  width: 30%;
-  margin: 1%;
-  padding: 3%;
+  width: 25%;
+  margin: 5px;
+  padding: 25px;
+  margin-top: 60px;
   background-color: rgb(245, 245, 245);
   border-radius: 20px;
 }
 
 .right {
   float: right;
-  width: 65%;
+  width: 70%;
   margin: 1%;
   padding: 1%;
+  margin-top: 60px;
 }
 
 .home-left {
@@ -155,16 +157,20 @@ textarea {
 }
 
 .joined {
-  text-transform: lowercase;
   font-size: 12px;
   text-align: center;
   color: gray;
   margin-top: 20px;
 }
 
-.profile-card-text {
+.profile-card-bio {
   text-align: center;
   margin: 0px;
+}
+
+.profile-card-location {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .profile-buttons {
@@ -174,7 +180,17 @@ textarea {
 .profile-name {
   text-align: center;
   padding: 10px;
+  padding-bottom: 0px;
   color: #7791B2;
+  letter-spacing: 2px;
+}
+
+.username {
+  text-align: center;
+  padding: 0px;
+  padding-bottom: 10px;
+  line-height: 5px;
+  color: #000;
 }
 
 .avatar {
@@ -204,27 +220,20 @@ textarea {
   margin-top: 100px;
 }
 
-.mini-avatar {
-  border-radius: 50%;
-  margin-bottom: 20px;
+.photo-show-box {
+  padding: 10px;
+  padding-top: 70px;
+  width: 100%;
 }
 
-.photo-show-box {
-  float: left;
-  padding: 20px;
-  position: absolute;
-  left: 200px;
+.photo-show-box img {
+  display: block;
+  margin: auto;
 }
 
 .photo-show-details {
-  float: right;
-  position: absolute;
-  left: 800px;
-  top: 150px;
-  padding: 20px;
-  margin: 20px;
-  padding-right: 0px;
-  margin-right: 0px;
+  width: 100%;
+  text-align: center;
 }
 
 .post-index-feed-container {
@@ -285,4 +294,20 @@ a:hover {
 .navbar-toggler-icon {
   color: #7791B2;
   font-size: 32px;
+}
+
+.image {
+  /* Prevent vertical gaps */
+  line-height: 0;
+  -webkit-column-count: 2;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    2;
+  -moz-column-gap:      0px;
+  column-count:         2;
+  column-gap:           0px;  
+}
+
+.image img {
+  width: 100% !important;
+  height: auto !important;
 }
